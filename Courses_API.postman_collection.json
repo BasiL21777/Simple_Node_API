@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "bad2a7ed-8f45-4562-a022-0e3368266bc1",
+		"name": "Courses_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37560559",
+		"_collection_link": "https://data-int.postman.co/workspace/3f3b9dc6-4e13-452a-82fe-063fca46cd83/collection/37560559-bad2a7ed-8f45-4562-a022-0e3368266bc1?action=share&source=collection_link&creator=37560559"
+	},
+	"item": [
+		{
+			"name": "update course",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"     C++ Course  \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/courses/1",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/courses/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/courses/3",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Node course\",\r\n        \"price\": 1000\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/courses/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get course details",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/courses/3",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
