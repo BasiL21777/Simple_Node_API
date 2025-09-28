@@ -1,5 +1,6 @@
-let {courses}=require("../data/courses.js")
+let {readCourses , writeCourses}=require("../data/courses.js")
 const { validationResult } = require("express-validator");
+let courses = readCourses();
 
 const GetAllCourses=(req, res) => {res.json(courses);};
 
@@ -13,7 +14,7 @@ const GetCourseDetails= (req, res) => {
 	} else {
 		res.status(404).json({ msg: "Course Not Found" })
 	}
-}
+};
 
 const CreateCourse=(req, res) => {
 		console.log(req.body);// undefined (we want use body parser middleware)
@@ -28,7 +29,7 @@ const CreateCourse=(req, res) => {
 					courses.push({ id: courses.length + 1, ...req.body});
 					res.status(201);
 					res.json(courses);
-
+					writeCourses(courses)
 			}
 		}
 	};
@@ -43,6 +44,7 @@ const PathCourse= (req, res) => {
 
   courses[index] = { ...courses[index], ...req.body };
   res.status(200).json(courses[index]);
+  writeCourses(courses);
 }
 
 
@@ -51,6 +53,8 @@ const DeleteCourse=(req,res)=>{
 	// it means courses where not equal ID
 	courses=courses.filter((course)=>course.id!==courseID);
 	res.status(200).json({msg:"Deleted Successfully"});
+    writeCourses(courses);
+
 }
 
 module.exports={
