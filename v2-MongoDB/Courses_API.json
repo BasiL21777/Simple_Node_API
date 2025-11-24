@@ -1,0 +1,126 @@
+{
+  "v": 10,
+  "name": "Courses_API",
+  "folders": [],
+  "requests": [
+    {
+      "v": "16",
+      "name": "update course",
+      "method": "PATCH",
+      "endpoint": "<<localhost>>/api/courses/1",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": "application/json",
+        "body": "{\r\n        \"title\": \"     C++ Course  \"\r\n}"
+      },
+      "requestVariables": [],
+      "responses": {},
+      "_ref_id": "req_micz6b26_2c81740c-1e73-452a-85cf-b2aac45e0e40"
+    },
+    {
+      "v": "16",
+      "name": "Get All courses",
+      "method": "GET",
+      "endpoint": "<<localhost>>/api/courses/",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "_ref_id": "req_micz6b26_7ca5d101-7584-42e3-bbbe-bba127a58616"
+    },
+    {
+      "v": "16",
+      "name": "Delete Course",
+      "method": "DELETE",
+      "endpoint": "<<localhost>>/api/courses/3",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "_ref_id": "req_micz6b26_8d8d178a-6d03-4858-9605-ace84f9b5b65"
+    },
+    {
+      "v": "16",
+      "name": "create new course",
+      "method": "POST",
+      "endpoint": "<<localhost>>/api/courses/",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": "application/json",
+        "body": "{\r\n        \"title\": \"Node course\",\r\n        \"price\": 1000\r\n    }"
+      },
+      "requestVariables": [],
+      "responses": {},
+      "_ref_id": "req_micz6b26_fc384d15-1030-431e-b7ef-34e8f3152be8"
+    },
+    {
+      "v": "16",
+      "name": "Get course details",
+      "method": "GET",
+      "endpoint": "<<localhost>>/api/courses/3",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "none",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "_ref_id": "req_micz6b26_67c06380-47bf-4dfa-a315-73d0816c8c6f"
+    }
+  ],
+  "auth": {
+    "authType": "inherit",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [
+    {
+      "key": "localhost",
+      "initialValue": "",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "_ref_id": "coll_micz6b26_2659f60e-7568-48cf-9cdd-ff61f9639e8d"
+}
